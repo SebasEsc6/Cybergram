@@ -1,11 +1,12 @@
 import React from 'react'
-import Lefthover from '../Components/Lefthover'
+import Lefthover from '../Components/Shared/Lefthover'
+import ContainerCardPublicacion from '../Components/Index/ContainerCardPublicacion'             
 
 const Homepage = () => {
   return (
     <div>
         <Lefthover />
-        <h1>HomePage</h1>
+        <ContainerCardPublicacion />
         </div>
   )
 }
