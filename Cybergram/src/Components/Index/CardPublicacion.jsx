@@ -7,6 +7,8 @@ function CardPublicacion() {
     <div>
       <image ></image>
       <ItemPerfil />
+      <button>Like</button>
+      <button>Comment</button>
       <ItemComentario />
       </div>
   ) 
