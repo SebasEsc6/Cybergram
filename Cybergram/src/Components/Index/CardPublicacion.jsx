@@ -5,7 +5,7 @@ import ItemPerfil from './ItemPerfil'
 function CardPublicacion() {
   return (
     <div>
-      <image ></image>
+      <image></image>
       <ItemPerfil />
       <button>Like</button>
       <button>Comment</button>
