@@ -4,7 +4,7 @@ import ContainerCardPublicacion from '../Components/Index/ContainerCardPublicaci
 
 const Homepage = () => {
   return (
-    <div>
+    <div >
         <Lefthover />
         <ContainerCardPublicacion />
         </div>

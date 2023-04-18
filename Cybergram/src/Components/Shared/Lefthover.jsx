@@ -3,8 +3,8 @@ import CardPages from '../Index/CardPages'
 
 function Lefthover() {
   return (
-    <div>
-    <h1>Left Hover</h1>
+    <div className='LeftHover'>
+    <h1 className='titulo'>CYBERGRAM</h1>
     <CardPages />
     </div>
   )

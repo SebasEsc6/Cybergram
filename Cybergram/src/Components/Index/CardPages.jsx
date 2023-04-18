@@ -2,7 +2,11 @@ import React from 'react'
 
 function CardPages() {
   return (
-    <div>CardPages</div>
+    <div className='Cardpage'>
+    <button className='btn-Card'>
+    <i> </i> HOME
+    </button>
+    </div>
   )
 }
 
