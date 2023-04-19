@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function CardPages() {
+
+function CardPages(props) {
+
   return (
     <div className='Cardpage'>
     <button className='btn-Card'>
-    <i> </i> HOME
+    <img src={props.icon} alt='Imagen' className='CardIcon' />
+    <h1>{props.text}</h1>
     </button>
     </div>
+
   )
 }
 

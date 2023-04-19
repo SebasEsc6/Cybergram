@@ -12,11 +12,11 @@ body{
 
 .containerdiv{
 position: fixed;
-background-image: url(../Multimedia/imgs/Fondo_01.jpg);
+background-image: url(../assets/Multimedia/imgs/Fondo_01.jpg);
 background-size: cover;
 width:200vh;
 height: 100vh;
-left:40vh;
+left:35vh;
 top:0px;
 display: flex;
 flex-direction: column;
@@ -29,7 +29,7 @@ gap: 20px;
 font-family: 'Iceland';  
 font-size: 20px;
 position: fixed;
-width: 40vh;
+width: 35vh;
 height: 100vh;
 left: 0px;
 top: 0px;
@@ -39,6 +39,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: flex-start;
+gap: 10px;
+
 
 }
 .titulo{
@@ -48,18 +50,54 @@ background-image: linear-gradient(to right, #FFFF, #B154D2);
 }
 .Cardpage{
 position: relative;
-
-
 }
 .btn-Card{
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 0px 8px 8px 0px;
+    justify-content: flex-start;
+    width: 25vh;
+    padding: 5px 10px;
+    border-radius: 8px;
     background-color: #420A47;
     color: white;
     font-size: 25px;
     font-family: 'Iceland', cursive;
+    border: 1px solid transparent;
+    
+}
+.btn-Card img{
+padding-right: 5px;
 
+}
+.btn-Card h1{
+font-size: 25px;
+font-weight: lighter;
+}
+.CardIcon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+}
+.addBttn{
+    background-image: url(../assets/Multimedia/imgs/Icon-upload.png);
+    display: flex;
+    width: 140px;
+    height: 140px;
+    background-color: transparent;
+    background-size: cover;
+    border: transparent;
+}
+.divUpload{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    border-bottom:  2px solid white;
+    margin-top: 75%;
+
+}
+.Upload{
+    font-size: 40px;
+    font-weight: lighter;
 }
