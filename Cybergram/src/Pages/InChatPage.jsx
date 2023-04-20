@@ -1,11 +1,11 @@
 import React from 'react'
 import Lefthover from '../Components/Shared/Lefthover'
-import CardMesagge from '../Components/Shared/CardMesagge'
+import CardMesagge from '../Components/Index/CardMesagge'
 import ItemChatBar from '../Components/Index/ItemChatBar'
 import ItemUserName from '../Components/Index/ItemUserName'
 function InChatPage() {
-  return impo(
-    <div>InChatPage
+  return (
+    <div className='Div_Inchatepage'>InChatPage
         <Lefthover/>
         <CardMesagge/>
         <ItemChatBar/>
@@ -13,5 +13,5 @@ function InChatPage() {
     </div>
   )
 }
-impo
+
 export default InChatPage

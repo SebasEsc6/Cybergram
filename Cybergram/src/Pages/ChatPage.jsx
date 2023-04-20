@@ -5,7 +5,7 @@ import ItemChatBar from '../Components/Index/ItemChatBar'
 import
 function ChatPage() {
   return (
-    <div>ChatPage
+    <div>
         <CardMesagge/>
         <Lefthover/>
     </div>
