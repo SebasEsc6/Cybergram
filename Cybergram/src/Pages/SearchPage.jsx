@@ -1,6 +1,6 @@
 import React from 'react'
 import Lefthover from '../Components/Shared/Lefthover'
-import ContainerCardPublication from '../Components/Shared/ContainerCardPublication'
+import ContainerCardPublication from '../Components/Index/CardPublicacion'
 import SearchBar from '../Components/Index/SearchBar'
 function SearchPage() {
   return (
