@@ -2,9 +2,10 @@ import React from 'react'
 import img_user from '../../assets/Multimedia/imgs/img_user.png'
 function ItemUserName() {
   return (
-    <div>ItemUserName
+    <div className='itemusername'>
       <img src={img_user} alt="imagen_usuario" />
-      <h3>Totono.39</h3>
+      <label className='label_totono'>Totono.39</label>
+     
     </div>
   )
 }

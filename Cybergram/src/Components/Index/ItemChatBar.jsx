@@ -2,11 +2,11 @@ import React from 'react'
 
 function ItemChatBar() {
   return (
-    <form className='form'>
-    <input type="text" />
-    <label className="label-nombre"></label>
-    <span className='tex'>Send message</span>
-    </form>
+    <div className='ItemChatBar'>
+    <div className='inputBx'>
+    <input type="text" placeholder='send message' />
+        </div>
+    </div>
   )
 }
 

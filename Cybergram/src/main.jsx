@@ -16,7 +16,8 @@ import {faUser, faLock} from '@fortawesome/free-solid-svg-icons';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <LoginPage/>
+    <InChatPage/>
+    
     <FontAwesomeIcon icon={faUser}/>
   
    

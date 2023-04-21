@@ -17,12 +17,12 @@ const Login_Page = () => {
   });
   const database = [
     {
-      username: "user1",
-      password: "pass1"
+      username: "Usuario1",
+      password: "Usuario1"
     },
     {
-      username: "user2",
-      password: "pass2"
+      username: "Usuario2",
+      password: "Usuario2"
     }
   ];
   

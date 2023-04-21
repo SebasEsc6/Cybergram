@@ -5,11 +5,12 @@ import ItemChatBar from '../Components/Index/ItemChatBar'
 import ItemUserName from '../Components/Index/ItemUserName'
 function InChatPage() {
   return (
-    <div className='Div_Inchatepage'>InChatPage
+    <div className='Div_Inchatepage'>
         <Lefthover/>
+        <ItemUserName/>
         <CardMesagge/>
         <ItemChatBar/>
-        <ItemUserName/>
+        
     </div>
   )
 }
