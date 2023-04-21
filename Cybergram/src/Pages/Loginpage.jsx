@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser, faLock} from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
+  
 
 const Login_Page = () => {
+  
+
+  const navigate = useNavigate();
+
+  const Register = () => {
+    navigate('/home');
+  };
 
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -17,12 +26,12 @@ const Login_Page = () => {
   });
   const database = [
     {
-      username: "Usuario1",
-      password: "Usuario1"
+      username: "user1",
+      password: "pass1"
     },
     {
-      username: "Usuario2",
-      password: "Usuario2"
+      username: "user2",
+      password: "pass2"
     }
   ];
   
@@ -45,6 +54,7 @@ const Login_Page = () => {
 
       } else {
         setIsSubmitted(true);
+        navigate('/home');
         
       }
     } else {
@@ -61,11 +71,7 @@ const Login_Page = () => {
       ...prevUserData,
       [name]: value,
     }));
-
-    
-    
-        
-      }; 
+  };
   
   return (
     <div className='Login'>
@@ -93,7 +99,7 @@ const Login_Page = () => {
           <div>
           {renderErrorMessage("pass")}<br/>
           <div className="inputBx">
-				<input type="submit" value="Sign in"/>
+				<input type="submit" value="Sign in" onClick={Register}/>
 			</div>
         </div>
       </form>

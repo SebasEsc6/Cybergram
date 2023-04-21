@@ -3,10 +3,15 @@ import Gohome from "../Components/Shared/Gohome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook,faGoogle } from "@fortawesome/free-brands-svg-icons";
-
+import { useNavigate } from "react-router";
 
 function Registerpage() {
   
+  const navigate = useNavigate();
+
+  const casa = () => {
+    navigate('/loginpage');
+  };
   return (
     <div className="Login">
       <h2>CREATE YOUR ACOUNTT </h2>
@@ -47,7 +52,8 @@ function Registerpage() {
 
           
           <div className="inputBx">
-            <input type="submit" value="Sign in" />
+            <input type="submit" value="Sign in"  onClick={casa}/>
+
           </div>
           
           <br />

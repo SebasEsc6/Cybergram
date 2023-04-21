@@ -26,12 +26,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
   
     <Routes>
-    <Route path='/' element={<Registerpage/>}/>
-    <Route path='Home' element={<Homepage/>}/>
-    <Route path='profile' element={<ProfilePage/>}/>
-    <Route path='Search' element={<SearchPage/>}/>
-    <Route path='profile' element={<ProfilePage/>}/>
-    <Route path='Chat' element={<InChatPage/>}/>
+    <Route path='/' element={<Homepage/>}/>
+    <Route path='/register' element={<Registerpage/>}/>
+    <Route path='/home' element={<Homepage/>}/>
+    <Route path='/profile' element={<ProfilePage/>}/>
+    <Route path='/Search' element={<SearchPage/>}/>
+    <Route path='/profile' element={<ProfilePage/>}/>
+    <Route path='/Chat' element={<InChatPage/>}/>
+    <Route path='/loginpage' element={<LoginPage/>}/>
     </Routes>
     </BrowserRouter>
     <FontAwesomeIcon icon={faUser}/>
@@ -40,7 +42,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     
 )
-    
   
 
 
