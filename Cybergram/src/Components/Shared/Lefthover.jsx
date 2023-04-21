@@ -6,13 +6,17 @@ import search from '../../assets/Multimedia/imgs/Icon-search.png'
 import user from '../../assets/Multimedia/imgs/Icon-User.png'
 
 function Lefthover() {
+
+
   return (
     <div className='LeftHover'>
       <h1 className='titulo'>CYBERGRAM</h1>
-      <CardPages icon={home} text='HOME'/>
-      <CardPages icon={user} text='PROFILE'/>
-      <CardPages icon={search} text='SEARCH'/>
-      <CardPages icon={chat} text='MESSAGES'/>
+      
+      <CardPages icon={home} route='Home' text='HOME'/>
+      <CardPages icon={user}  route='profile' text='PROFILE'/>
+      <CardPages icon={search} route='Search' text='SEARCH'/>
+      <CardPages icon={chat} route='Chat' text='MESSAGES'/>
+      
       <div className='divUpload'>
       <button className='addBttn'></button>
       <h1 className='Upload'>UPLOAD</h1>
