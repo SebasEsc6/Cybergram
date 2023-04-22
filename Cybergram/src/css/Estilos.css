@@ -439,3 +439,50 @@ margin-left: 11%;
   font-family: "Iceland", cursive;
 }
 
+.itemchat label{
+  width: 100%;
+position: relative;
+margin-left: 60px;
+color: white;
+font-family: "Iceland", cursive;
+font-size: 5em;
+}
+.itemchat{
+  width: 100%;
+  
+  background-color: #171717;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items: center;
+}
+
+.itemsearch{
+  width: 100%;
+  height: 125px;
+  background-color: #171717;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  
+
+}
+.itemsearch .inputBx input{
+  position: relative;
+  width: 65%;
+  height: 60px;
+  margin-left: 180px;
+  margin-top: 29px;
+  
+
+  font-size: 1.6em;
+  color: #be06ff;
+  outline: none;
+  background: #292929;
+  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+}
+.itemsearch.inputBx input::placeholder {
+  color: #be06ff;
+  font-family: "Iceland", cursive;
+}

@@ -8,7 +8,7 @@ import './css/EstilosHome.css'
 import InChatPage from './Pages/InChatPage'
 import LoginPage from './Pages/LoginPage'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faUser, faLock, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {faUser, faLock, faEnvelope,faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import './css/ProfilePage.css'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
