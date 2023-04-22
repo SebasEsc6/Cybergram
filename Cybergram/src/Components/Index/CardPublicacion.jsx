@@ -8,7 +8,7 @@ import iconlike from '../../assets/Multimedia/imgs/Icon-Like.png'
 function CardPublicacion() {
   return (
     <div className='containerG'>
-      <div className="container">
+      <div className="containerPubli">
         <div className="DivPhoto">
           <img src={img} className='photo'></img>
         </div>

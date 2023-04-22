@@ -1,15 +1,32 @@
 import React from 'react'
+import imgperfil from '../../assets/Multimedia/imgs/imgPerfil.jpg'
+import CardPublicacion from './CardPublicacion'
 
-function CardProfile() {
+function CardProfile(props) {
   return (
-    <div class="container">
-      <div class="DivPerfilPage">
-        <div class="lblUser"></div>
-        <div class="imgUserProfile"></div>
+    <div className="containerPerfil">
+      <div className="lblUser">
+        <a>{props.user}</a>
       </div>
-      <div class="lblFollowers"></div>
-      <div class="lblPost"></div>
-      <div class="lblFollowinf"></div>
+      <div className="imgUserProfile">
+        <img src={imgperfil} className='imgPhotoProfile'></img>
+      </div>
+      <div className='divLabels'>
+      <div className="lblFollowers"><a className='txtBlanco'>Followers</a><a className='txtMorao'>{props.followers}</a></div>
+      <div className="lblPost"><a className='txtBlanco'>Post</a><a className='txtMorao'>{props.post}</a></div>
+      <div className="lblFollowinf"><a className='txtBlanco'>Following</a><a className='txtMorao'>{props.followers}</a></div>
+      </div>
+      <div className='DivContainerPubli'>
+      <CardPublicacion />
+      <CardPublicacion />
+      <CardPublicacion />
+      <CardPublicacion />
+      <CardPublicacion />
+      <CardPublicacion />
+      <CardPublicacion />
+      <CardPublicacion />
+      <CardPublicacion />
+      </div>
     </div>
   )
 }

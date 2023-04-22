@@ -1,13 +1,10 @@
 body {
     font-family: 'Iceland', cursive;
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100%;
     margin: 0;
 }
-
 .containerdiv {
     background-image: url(../assets/Multimedia/imgs/Fondo_01.jpg);
     background-size: cover;
@@ -48,7 +45,7 @@ body {
     height: 140px;
     background-color: transparent;
     background-size: cover;
-    border: transparent;
+    border: black;
     margin-top: 75%;
 }
 .divUpload {
@@ -124,7 +121,7 @@ body {
     margin: 0;
 }
 
-.container {
+.containerPubli {
     max-height: 670px;
     max-width: 80%;
     display: grid;
@@ -288,5 +285,4 @@ body {
     padding-bottom: 10px;
   }
   .comment { grid-area: comment; }
-  
-
+ 

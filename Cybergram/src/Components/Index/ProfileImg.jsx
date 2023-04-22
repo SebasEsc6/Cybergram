@@ -9,5 +9,4 @@ function ProfileImg
   )
 }
 
-export default Prof
-ileImg
+export default ProfileImg

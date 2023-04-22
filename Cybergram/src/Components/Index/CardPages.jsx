@@ -8,7 +8,6 @@ function CardPages(props) {
 const navigate = useNavigate();
 
 const handleClick = (event) => {
-
   navigate(props.route);
 };
 

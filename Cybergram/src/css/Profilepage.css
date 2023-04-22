@@ -1,3 +1,105 @@
-.body{
+.profilePageDiv {
+    background-image: url(../assets/Multimedia/imgs/Fondo_002.png);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
 
+.containerPerfil {
+
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+
+.lblUser {
+    font-size: 80px;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    text-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.imgUserProfile {
+
+    display: flex;
+    justify-content: center;
+}
+
+.imgPhotoProfile {
+    clip-path: polygon(49% 0, 93% 29%, 100% 79%, 48% 100%, 0 79%, 6% 31%);
+    height: 300px;
+    width: 210px;
+}
+
+.divLabels{
+    margin-top: 20px;
+    width: 200%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    font-size: 30px;
+    border: 1px solid white;
+}
+
+
+.lblFollowers {
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #161616;
+    box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+    border-radius: 16px;
+    gap: 3%;
+}
+
+.lblPost {
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #161616;
+    box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+    border-radius: 16px;
+    gap: 3%;
+}
+
+.lblFollowinf {
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #161616;
+    box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+    border-radius: 16px;
+    gap: 3%;
+}
+.txtMorao{
+    color: #BE06FF;
+}
+.DivContainerPubli {
+    border: 1px solid white;
+    width: 250%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
