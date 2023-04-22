@@ -14,10 +14,10 @@ const handleClick = (event) => {
 
   return (
     <div className='Cardpage'>
-    <button className='btn-Card'>
-    <img src={props.icon} alt='Imagen' className='CardIcon'  onClick={handleClick}/>
-    <h1>{props.text}</h1>
-    </button>
+      <button className='btn-Card'>
+        <img src={props.icon} alt='Imagen' className='CardIcon' onClick={handleClick} />
+        <h1>{props.text}</h1>
+      </button>
     </div>
 
   )

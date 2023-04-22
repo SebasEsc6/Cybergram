@@ -1,12 +1,20 @@
 import React from 'react'
-import CardProfile from '../Index/CardProfile'
-import Gohome from '../Shared/Gohome'
+import PubliPerfil from './PubliPerfil'
 
 const ContainerPerfil = () => {
   return (
-    <div>
-       
-    </div>
+    <div className='DivContainerPubli'>
+      <PubliPerfil />
+      <PubliPerfil />
+      <PubliPerfil />
+      <PubliPerfil />
+      <PubliPerfil />
+      <PubliPerfil />
+      <PubliPerfil />
+      <PubliPerfil />
+      <PubliPerfil />
+
+      </div>
   )
 }
 

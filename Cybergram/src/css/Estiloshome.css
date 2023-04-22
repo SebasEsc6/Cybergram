@@ -71,7 +71,9 @@ body {
 
 .Cardpage {
     position: relative;
+    transition: background 0.5s ease;
 }
+
 
 .btn-Card {
     display: flex;
@@ -85,7 +87,7 @@ body {
     font-size: 25px;
     font-family: 'Iceland', cursive;
     border: 1px solid transparent;
-
+    
 }
 
 .btn-Card img {
@@ -119,6 +121,7 @@ body {
     padding-top: 3%;
     padding-bottom: 3%;
     margin: 0;
+    
 }
 
 .containerPubli {

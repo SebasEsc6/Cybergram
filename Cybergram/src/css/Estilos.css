@@ -1,0 +1,488 @@
+
+
+.Div_Inchatepage {
+  background-image: url(../assets/Multimedia/imgs/image_16.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  left: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 0;
+  overflow-y: auto;
+
+  
+}
+.form {
+  width: 100%;
+  height: 50px;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.form.imput {
+  width: 100%;
+  height: 100%;
+  background: none;
+  color: white;
+  padding-top: 20px;
+  border: none;
+}
+.form.label-nombre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #747bff;
+}
+.form.label-nombre:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100px;
+  height: 100%;
+  border-bottom: 3px solid #61dafb;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.text {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+  color: #747bff;
+}
+.form.imput:focus + .label-nombre .text,
+.form.imput:valid + .label-nombre .text {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #61dafb;
+}
+
+.form.imput:focus + .label-nombre:after,
+.form.imput:valid + .label-nombre:after {
+  transform: translateX(0%);
+}
+.Login {
+  background-image: url(../assets/Multimedia/imgs/Exportar.jpg);
+  background-size: cover;
+ 
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 50px;
+}
+
+.form {
+  width: 100%;
+  height: 50px;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.Form.imput {
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: rgb(13, 4, 4);
+  padding-top: 20px;
+  border: none;
+}
+.form.label-user-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #747bff;
+}
+.form.label-user-name:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100px;
+  height: 100%;
+  border-bottom: 3px solid purple;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.Form.imput:focus + .label-user-name .span_user_name,
+.Form.imput:valid + .label-user-name .span_user_name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #61dafb;
+}
+
+.Form.imput:focus + .label-user-name:after,
+.Form.imput:valid + .label-user-name:after {
+  transform: translateX(0%);
+}
+.Titulo_sigin {
+  color: #6a0574;
+  font-size: 80px;
+}
+.btn-neon {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #350042;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0s;
+}
+.btn-neon:hover {
+  background: #a945c7;
+  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+  transition-delay: 0s;
+}
+
+.btn-neon:hover #span2 {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.btn-neon:hover #span4 {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+.square {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #ffffff;
+  transition: 0.5s;
+}
+.square i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+.square i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+.square i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+.square:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.Login {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 1px;
+}
+.Login h2 {
+  font-size: 5em;
+  color: #be06ff;
+}
+
+.Login .inputBx input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+
+  font-size: 1.2em;
+  color: #be06ff;
+  outline: none;
+  background: #292929;
+  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+}
+.Login .inputBx input[type="submit"] {
+  font-family: "Iceland", cursive;
+  width: 100%;
+  background: #fe0000;
+  background: linear-gradient(45deg, #8826a5, #805189);
+  border: none;
+  cursor: pointer;
+
+  background: #292929;
+  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+}
+.Login .inputBx input::placeholder {
+  color: #be06ff;
+  font-family: "Iceland", cursive;
+}
+
+.Login a {
+  color: #ffffff;
+}
+.ItemChatBar .inputBx input {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5%;
+
+  font-size: 1.2em;
+  color: #be06ff;
+  outline: none;
+  background: #292929;
+  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+}
+.ItemChatBar .inputBx input::placeholder {
+  color: #be06ff;
+  font-family: "Iceland", cursive;
+}
+.ItemChatBar .inputBx input {
+  margin-top: 65%;
+  width: 850px;
+  height: 40px;
+  display: flex;
+  
+  justify-content: flex-end;
+  align-items: center;
+  
+
+  font-size: 1.2em;
+  color: #be06ff;
+}
+.ItemChatBar{
+ margin: 0;
+  margin-top:0;
+}
+
+.itemusername img{
+  position: relative;
+  width: 100px;
+  height: 100%;
+  margin-left: 380px;
+}
+
+  
+ 
+
+.itemusername{
+  
+  width: 100%;
+  
+  background-color: #171717;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items: center;
+ 
+}
+.itemusername label{
+
+width: 100%;
+position: relative;
+margin-left: 60px;
+color: white;
+font-family: "Iceland", cursive;
+font-size: 5em;
+
+}
+.primer_mensaje label{
+width: 40%;
+position: relative;
+margin-left: 40px;
+color: white;
+font-family: "Iceland", cursive;
+font-size: 2.8em;
+background-color: #292929;
+
+
+
+}
+
+.ItemMesagge {
+  display: flex;
+  flex-direction: column;
+  
+  width: 60%;
+  font-size: 40px;
+  margin-left: 15%;
+
+}
+
+.mensaje_propio{
+  display: flex;
+  padding: 20px;
+  justify-content: left;
+  margin:0;
+  align-items: center;
+}
+.mensaje_propio a {
+  justify-content: center;
+  text-align: center;
+
+}
+
+.mensaje_propio img {
+  width: 120px;
+  height: 150px;
+ 
+  margin-right: 50px;
+  clip-path: polygon(49% 0, 93% 29%, 100% 79%, 48% 100%, 0 79%, 6% 31%);
+}
+
+.mensaje_ajeno{
+  
+  display: flex;
+ 
+ 
+  right:0;
+  
+  
+  display: flex;
+  margin-left: 800px;
+  
+  align-items: center;
+  float: right;
+}
+.mensaje_ajeno img{
+width: 120px;
+height: 150px;
+clip-path: polygon(49% 0, 93% 29%, 100% 79%, 48% 100%, 0 79%, 6% 31%);
+margin-left: 50px;
+}
+
+.mensaje_ajeno a {
+ 
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+
+}
+
+.containerdiv_config {
+  background-image: url(../assets/Multimedia/imgs/Fondo_01.jpg);
+  background-size: cover;
+  
+  width: 100%;
+  height: 90vh;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
+  padding: 50px;
+  gap:120px;
+  
+
+
+  
+}
+
+.btn_config{
+  background-color: #292929;
+  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;  
+height: 100px;
+width: 650px;
+margin-left: 11%;
+
+}
+.texto_blanco{
+  color: white;
+  font-size: 60px;
+  font-family: "Iceland", cursive;
+}
+
+.texto_morado{
+  color: #BE06FF;
+  font-size: 60px;
+  font-family: "Iceland", cursive;
+}
+
+.itemchat label{
+  width: 100%;
+position: relative;
+margin-left: 60px;
+color: white;
+font-family: "Iceland", cursive;
+font-size: 5em;
+}
+.itemchat{
+  width: 100%;
+  
+  background-color: #171717;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items: center;
+}
+
+.itemsearch{
+  width: 100%;
+  height: 125px;
+  background-color: #171717;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  
+
+}
+.itemsearch .inputBx input{
+  position: relative;
+  width: 65%;
+  height: 60px;
+  margin-left: 180px;
+  margin-top: 29px;
+  
+
+  font-size: 1.6em;
+  color: #be06ff;
+  outline: none;
+  background: #292929;
+  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+}
+.itemsearch.inputBx input::placeholder {
+  color: #be06ff;
+  font-family: "Iceland", cursive;
+}

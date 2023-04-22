@@ -1,5 +1,5 @@
 import React from 'react'
-import imgperfil from '../../assets/Multimedia/imgs/imgPerfil.jpg'
+import imgperfil from '../../assets/Multimedia/imgs/Img_user.png'
 import CardPublicacion from './CardPublicacion'
 
 function CardProfile(props) {
@@ -15,18 +15,7 @@ function CardProfile(props) {
       <div className="lblFollowers"><a className='txtBlanco'>Followers</a><a className='txtMorao'>{props.followers}</a></div>
       <div className="lblPost"><a className='txtBlanco'>Post</a><a className='txtMorao'>{props.post}</a></div>
       <div className="lblFollowinf"><a className='txtBlanco'>Following</a><a className='txtMorao'>{props.followers}</a></div>
-      </div>
-      <div className='DivContainerPubli'>
-      <CardPublicacion />
-      <CardPublicacion />
-      <CardPublicacion />
-      <CardPublicacion />
-      <CardPublicacion />
-      <CardPublicacion />
-      <CardPublicacion />
-      <CardPublicacion />
-      <CardPublicacion />
-      </div>
+      </div>  
     </div>
   )
 }

@@ -3,9 +3,11 @@
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: 100vh;
+    max-height:100%;
+    overflow-y: auto;
     left: 0%;
     top: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +55,6 @@
     justify-content: center;
     gap: 10%;
     font-size: 30px;
-    border: 1px solid white;
 }
 
 
@@ -96,10 +97,63 @@
     color: #BE06FF;
 }
 .DivContainerPubli {
-    border: 1px solid white;
-    width: 250%;
+    width: 80%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 15px;
+    padding: 40px;
+}
+
+.publiPerfil{
+background-color: black;
+height: 250px;
+width: 400px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.PhotoPerfil{
+    height: 60%;
+    width: 80%;
+    border: 2px solid white;
+}
+.iconsPubli{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+    padding: 10px;
+    gap:10px
+}
+.iconsPubli button{
+background-color: transparent;
+width: 60px;
+height:60px;
+border: transparent;
+}
+.iconsPerfil{
+    width: 30px;
+    height: 30px;
+}
+.GoHome{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 2%;
+    top: 2%;
+    background-color: #420A47;
+    border-radius:8px;
+    border: transparent;
+    transition: background 0.5s ease;
+}
+.GoHome:hover{
+    background: #DD0068;
+
+}
+.GoHome img{
+    width: 40px;
+    height: 40px;
 }
