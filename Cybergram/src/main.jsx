@@ -15,6 +15,7 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import ProfilePage from './Pages/ProfilePage'
 import SearchPage from './Pages/SearchPage'
 import Registerpage from './Pages/Registerpage'
+import SettingsPage from './Pages/SettingsPage'
 
 
 
@@ -26,8 +27,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
   
     <Routes>
-    <Route path='/' element={<Homepage/>}/>
-    <Route path='/register' element={<Registerpage/>}/>
+    <Route path='/search' element={<SearchPage/>}/>
+    <Route path='/config' element={<SettingsPage/>}/>
+    <Route path='/home' element={<Homepage/>}/>
+    <Route path='/' element={<Registerpage/>}/>
     <Route path='/home' element={<Homepage/>}/>
     <Route path='/profile' element={<ProfilePage/>}/>
     <Route path='/Search' element={<SearchPage/>}/>

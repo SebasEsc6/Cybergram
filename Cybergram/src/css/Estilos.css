@@ -1,4 +1,5 @@
 
+
 .Div_Inchatepage {
   background-image: url(../assets/Multimedia/imgs/image_16.png);
   background-size: cover;
@@ -74,7 +75,7 @@
 .Login {
   background-image: url(../assets/Multimedia/imgs/Exportar.jpg);
   background-size: cover;
-  background-repeat: auto;
+ 
   width: 100%;
   height: 100%;
   left: 0px;
@@ -362,9 +363,10 @@ background-color: #292929;
 
 .mensaje_propio img {
   width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  height: 150px;
+ 
   margin-right: 50px;
+  clip-path: polygon(49% 0, 93% 29%, 100% 79%, 48% 100%, 0 79%, 6% 31%);
 }
 
 .mensaje_ajeno{
@@ -383,8 +385,8 @@ background-color: #292929;
 }
 .mensaje_ajeno img{
 width: 120px;
-height: 120px;
-border-radius: 50%;
+height: 150px;
+clip-path: polygon(49% 0, 93% 29%, 100% 79%, 48% 100%, 0 79%, 6% 31%);
 margin-left: 50px;
 }
 
@@ -396,4 +398,44 @@ margin-left: 50px;
 
 }
 
+.containerdiv_config {
+  background-image: url(../assets/Multimedia/imgs/Fondo_01.jpg);
+  background-size: cover;
+  
+  width: 100%;
+  height: 90vh;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
+  padding: 50px;
+  gap:120px;
+  
+
+
+  
+}
+
+.btn_config{
+  background-color: #292929;
+  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;  
+height: 100px;
+width: 650px;
+margin-left: 11%;
+
+}
+.texto_blanco{
+  color: white;
+  font-size: 60px;
+  font-family: "Iceland", cursive;
+}
+
+.texto_morado{
+  color: #BE06FF;
+  font-size: 60px;
+  font-family: "Iceland", cursive;
+}
 
