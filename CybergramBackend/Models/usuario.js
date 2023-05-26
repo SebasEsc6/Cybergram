@@ -13,6 +13,14 @@ const UsuarioSchema = Schema({
     password: {
         type: String,
         require: true
+    },
+    followers: {
+        type: String,
+        require: true
+    },
+    following: {
+        type: String,
+        require: true
     }
 },{
     toJSON: {
@@ -22,3 +30,5 @@ const UsuarioSchema = Schema({
         virtuals : true
     }
 });
+
+module.exports = model('Usuario',UsuarioSchema)
