@@ -7,9 +7,9 @@ const cors = require("cors");
 
 class servidor {
   constructor() {
-    this.PORT = process.env.PORT || 4001;
+    this.PORT = process.env.PORT || 4500;
     this.app = express();
-    this.server = require("http").createServer();
+    this.server = require("http").createServer(this.app);
     this.io = require("socket.io")(this.server);
 
     this.paths = {
@@ -55,8 +55,7 @@ class servidor {
 
   listen() {
     //Se abre en un server distinto porque en el mismo que el de app. No funciona, manda error 404
-    this.server.listen(3500);
-    this.app.listen(this.port, () => {
+    this.server.listen(this.PORT, () => {
       console.log("servidor corriendo en puerto", process.env.PORT);
     });
   }
