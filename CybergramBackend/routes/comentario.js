@@ -5,7 +5,7 @@ const { crearComentario} = require('../Controllers/comentarioController');
 const {validarCampos} = require('../middlewares/validar-campos')
 
 
-router.get('/publication',publication)
+//router.get('/publication', publication)
 
 router.post(
     '/comentario',

@@ -1,30 +1,26 @@
-const express = require('express');
-const publicacion = require('../Models/publicacionScheme');
+const express = require("express");
+const Publicacion = require("../Models/publicacionScheme");
 
+const crearPublicacion = async (req, res = express.request) => {
+  const publicacion = new Publicacion(req.body);
 
-const crearPublicacion = async(req, res = express.request) => {
-    const { photo, likes} = req.body
-    try {
+  try {
+    publicacion.user = req.uid;
+    const saved = await publicacion.save();
 
-        Publicacion = new publicacion(rq.body);
-
-        await publicacion.save();
-
-        res.status(200).json({
-            ok: true,
-            photo,likes
-        })
-    }catch(error){
-        console.log(error)
-        res.status(500).json({
-            ok:false,
-            error,
-        })
-    }
-}
-const publication = async(req,res = express.request) =>{}
+    res.status(200).json({
+      ok: true,
+      publicacion: saved,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      ok: false,
+      publicacion: "Internal error",
+    });
+  }
+};
 
 module.exports = {
-    crearPublicacion,
-    publication,
-}
+  crearPublicacion,
+};
