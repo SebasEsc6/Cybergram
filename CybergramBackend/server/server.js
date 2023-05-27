@@ -23,17 +23,11 @@ io.on("connection", (socket) => {
   });
 });
 
-//Se abre en un server distinto porque en el mismo que el de app. No funciona, manda error 404
-server.listen(3500);
-app.listen(process.env.PORT, () => {
-  console.log("servidor corriendo en puerto", process.env.PORT);
-});
-
 class servidor {
   constructor() {
     this.PORT = process.env.PORT || 4001;
     this.app = express();
-    this.server = require("http").createServer(this.app);
+    this.server = require("http").createServer();
     this.io = require("socket.io")(this.server);
 
     this.paths = {
@@ -64,6 +58,8 @@ class servidor {
   }
 
   listen() {
+    //Se abre en un server distinto porque en el mismo que el de app. No funciona, manda error 404
+    this.server.listen(3500);
     this.app.listen(this.port, () => {
       console.log("servidor corriendo en puerto", process.env.PORT);
     });
