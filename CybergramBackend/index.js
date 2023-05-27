@@ -15,8 +15,6 @@ dbConnection();
 app.use(express.json())
 app.use('/api/user' , require('./routes/user'))
 
-
-
 //Funcionalidad de sockets para chat
 io.on('connection', (socket) => {
     console.log('conectado')
