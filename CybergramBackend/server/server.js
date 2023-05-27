@@ -5,24 +5,6 @@ const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
 
-const app = express();
-const server = http.createServer();
-const io = new Server(server, {
-  cors: { origin: "*" },
-});
-
-//Funcionalidad de sockets para chat
-io.on("connection", (socket) => {
-  console.log("conectado");
-  socket.broadcast.emit("chat_message", {
-    usuario: "INFO",
-    mensaje: "Se ha conectado un nuevo usuario",
-  });
-  socket.on("chat_message", (data) => {
-    io.emit("chat_message", data);
-  });
-});
-
 class servidor {
   constructor() {
     this.PORT = process.env.PORT || 4001;
@@ -39,6 +21,7 @@ class servidor {
     this.connectionToDB();
     this.addMiddlewares();
     this.SetRoutes();
+    this.sockets();
   }
 
   async connectionToDB() {
@@ -55,6 +38,19 @@ class servidor {
     this.app.use(this.paths.user, require("../routes/user"));
     this.app.use(this.paths.publicacion, require("../routes/publicacion"));
     this.app.use(this.paths.comentario, require("../routes/comentario"));
+  }
+
+  sockets() {
+    this.io.on("connection", (socket) => {
+      console.log("conectado");
+      socket.broadcast.emit("chat_message", {
+        usuario: "INFO",
+        mensaje: "Se ha conectado un nuevo usuario",
+      });
+      socket.on("chat_message", (data) => {
+        io.emit("chat_message", data);
+      });
+    });
   }
 
   listen() {
