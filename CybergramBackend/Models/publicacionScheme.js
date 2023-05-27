@@ -25,4 +25,4 @@ const publicacionSchema = Schema({
     }
 });
 
-module.exports = model(publicacionSchema)
+module.exports = model('publicacion',publicacionSchema)
