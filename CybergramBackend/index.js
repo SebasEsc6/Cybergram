@@ -14,6 +14,8 @@ const io = new Server(server, {
 dbConnection();
 app.use(express.json())
 app.use('/api/user' , require('./routes/user'))
+app.use('/api/publicacion' , require('./routes/publicacion'))
+app.use('/api/comentario' , require('./routes/comentario'))
 
 //Funcionalidad de sockets para chat
 io.on('connection', (socket) => {
@@ -26,7 +28,6 @@ io.on('connection', (socket) => {
         io.emit('chat_message' , data)
     });
 });
-
 
 //Se abre en un server distinto porque en el mismo que el de app. No funciona, manda error 404
 server.listen(3000)
