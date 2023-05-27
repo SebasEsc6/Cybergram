@@ -9,6 +9,7 @@ const comentarioSchema = Schema({
         type : Schema.Types.ObjectId,
         ref: 'publicacion'
     },
+    
 },{
     toJSON: {
         virtuals : true

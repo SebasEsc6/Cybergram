@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const { check } = require('express-validator');
-const { crearUsuario, loginUsuario, revalidarToken } = require('../Controllers/UserController');
+const { crearComentario} = require('../Controllers/comentarioController');
 const {validarCampos} = require('../middlewares/validar-campos')
 
 
@@ -13,7 +13,7 @@ router.post(
         check('nameComment', 'El nombre es obligatorio').not().isEmpty(),
         validarCampos
     ],
-    crearUsuario)
+    crearComentario)
 
 
 
