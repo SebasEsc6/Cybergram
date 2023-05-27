@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const comentarioSchema = Schema({
-    nameComment: { 
+    contentComment: { 
         type: String,
         require: true
     },   
@@ -9,6 +9,10 @@ const comentarioSchema = Schema({
         type : Schema.Types.ObjectId,
         ref: 'publicacion'
     },
+    nameUser:{
+        type : Schema.Types.ObjectId,
+        ref: 'usuario'
+    }
     
 },{
     toJSON: {

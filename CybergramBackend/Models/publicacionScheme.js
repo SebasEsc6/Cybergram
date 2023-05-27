@@ -13,7 +13,7 @@ const publicacionSchema = Schema({
     },
     user:{
         type : Schema.Types.ObjectId,
-        ref: 'Usuario'
+        ref: 'usuario'
     }
 
 },{
@@ -24,5 +24,11 @@ const publicacionSchema = Schema({
         virtuals : true
     }
 });
+
+publicacionSchema.method('toJSON', function() {
+    const {__v,_id, ...object} = this.toObject();
+     object.id = _id;
+     return object;
+ })
 
 module.exports = model('publicacion',publicacionSchema)

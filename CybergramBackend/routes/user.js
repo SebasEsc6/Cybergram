@@ -8,18 +8,18 @@ const {emailExiste} = require('../helpers/db_validators')
 
 router.get('/LoginUser', loginUsuario)
 
-router.post(
-    '/newUser',
-    [
-        check('name', 'El nombre es obligatorio').not().isEmpty(),
-        check('email','El email es obligatorio').isEmail(),
-        check('email').custom(emailExiste),
-        check('password', ).isLength({min:6}),
-        validarCampos
-    ],
-    crearUsuario)
+const express = require('express')
+const router = express.Router();
+const {ValidateUser} = require('../validators/checks')
+const { crearUsuario, loginUsuario, revalidarToken } = require('../Controllers/UserController');
 
-router.get('/renew')
+
+
+router.get('/LoginUser', loginUsuario)
+
+router.post('/newUser',ValidateUser,crearUsuario)
+
+router.get('/renew', revalidarToken)
 
 
 module.exports = router;
