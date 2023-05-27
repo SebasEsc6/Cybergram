@@ -27,8 +27,6 @@ const crearUsuario = async (req, res = express.request ) => {
 const loginUsuario = async (req, res = express.request) => {
 
 }
-
-
 module.exports = {
     loginUsuario,
     crearUsuario, 

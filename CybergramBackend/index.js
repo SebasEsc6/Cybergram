@@ -10,6 +10,8 @@ app.use(express.json())
 app.use('/api/user' , require('./routes/user'))
 app.use('/api/publicacion' , require('./routes/publicacion'))
 app.use('/api/autorPublicacion' , require('./routes/autorPublicacion'))
+app.use('/api/publicacion' , require('./routes/publicacion'))
+app.use('/api/comentario' , require('./routes/comentario'))
 
 
 app.listen(process.env.PORT, ()  =>{
