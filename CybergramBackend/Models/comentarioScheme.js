@@ -1,26 +1,33 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
-const comentarioSchema = Schema({
-    contentComment: { 
-        type: String,
-        require: true
-    },   
-    publicacion:{
-        type : Schema.Types.ObjectId,
-        ref: 'publicacion'
+const comentarioSchema = Schema(
+  {
+    contentComment: {
+      type: String,
+      require: true,
     },
-    nameUser:{
-        type : Schema.Types.ObjectId,
-        ref: 'usuario'
-    }
-    
-},{
+    publicacion: {
+      type: Schema.Types.ObjectId,
+      ref: "publicacion",
+    },
+    nameUser: {
+      type: Schema.Types.String,
+      ref: "usuario",
+    },
+  },
+  {
     toJSON: {
-        virtuals : true
+      virtuals: true,
     },
     toObject: {
-        virtuals : true
-    }
+      virtuals: true,
+    },
+  }
+);
+comentarioSchema.method("toJSON", function () {
+  const { __v, _id, ...object } = this.toObject();
+  object.id = _id;
+  return object;
 });
 
-module.exports = model('comentario',comentarioSchema)
+module.exports = model("comentario", comentarioSchema);

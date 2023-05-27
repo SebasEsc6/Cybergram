@@ -1,21 +1,21 @@
-const express = require('express')
+const express = require("express");
 const router = express.Router();
-const { check } = require('express-validator');
-const { crearComentario} = require('../Controllers/comentarioController');
-const {validarCampos} = require('../middlewares/validar-campos')
+const { check } = require("express-validator");
+const { crearComentario } = require("../Controllers/comentarioController");
+const { validarCampos } = require("../middlewares/validar-campos");
+const { PublicacionExiste } = require("../helpers/db_validators");
+const { validarJWT } = require("../middlewares/validar-token");
 
-
-//router.get('/publication', publication)
+router.use(validarJWT);
 
 router.post(
-    '/comentario',
-    [
-        check('nameComment', 'El nombre es obligatorio').not().isEmpty(),
-        validarCampos
-    ],
-    crearComentario)
-
-
-
+  "/Post",
+  [
+    check("contentComment", "Debe de haber un contenido").not().isEmpty(),
+    check("publicacion").custom(PublicacionExiste),
+    validarCampos,
+  ],
+  crearComentario
+);
 
 module.exports = router;
