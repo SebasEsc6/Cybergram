@@ -372,8 +372,3 @@
   justify-content: flex-start;
   align-items: center;
 }
-
-.PageWithMenu {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-}

@@ -30,14 +30,6 @@ body {
   background-color: transparent;
   background-size: cover;
   border: black;
-  margin-top: 75%;
-}
-.divUpload {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  border-bottom: 2px solid white;
 }
 
 .Upload {
