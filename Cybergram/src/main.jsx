@@ -5,17 +5,18 @@ import Homepage from "./Pages/Homepage";
 import "./css/Estilos.css";
 import "./css/EstilosHome.css";
 import "./css/Profilepage.css";
-
+import "./Pages/Loginpage/Loginpage.css";
 import InChatPage from "./Pages/InChatPage";
-import LoginPage from "./Pages/LoginPage";
+import LoginPage from "./Pages/Loginpage/Loginpage";
+import Registerpage from "./Pages/Registerpage/Registerpage";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import ProfilePage from "./Pages/Pageprofile";
-import SearchPage from "./Pages/SearchPage";
-import Registerpage from "./Pages/Registerpage/Registerpage";
+import SearchPage from "./Pages/SearchPage/SearchPage";
+
 import SettingsPage from "./Pages/SettingsPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

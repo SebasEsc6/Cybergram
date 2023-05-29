@@ -1,0 +1,16 @@
+.LeftHover {
+  font-family: "Iceland";
+  font-size: 20px;
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  left: 0px;
+  top: 0px;
+  background: #171717;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}

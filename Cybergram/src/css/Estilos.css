@@ -72,20 +72,6 @@
 .form.imput:valid + .label-nombre:after {
   transform: translateX(0%);
 }
-.Login {
-  background-image: url(../assets/Multimedia/imgs/Exportar.jpg);
-  background-size: cover;
-
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 50px;
-}
 
 .form {
   width: 100%;
@@ -212,54 +198,7 @@
     transform: rotate(0deg);
   }
 }
-.Login {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 1px;
-}
-.Login h2 {
-  font-size: 5em;
-  color: #be06ff;
-}
 
-.Login .inputBx input {
-  position: relative;
-  width: 100%;
-  padding: 12px 20px;
-
-  font-size: 1.2em;
-  color: #be06ff;
-  outline: none;
-  background: #292929;
-  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
-  border-radius: 16px;
-}
-.Login .inputBx input[type="submit"] {
-  font-family: "Iceland", cursive;
-  width: 100%;
-  background: #fe0000;
-  background: linear-gradient(45deg, #8826a5, #805189);
-  border: none;
-  cursor: pointer;
-
-  background: #292929;
-  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
-  border-radius: 16px;
-}
-.Login .inputBx input::placeholder {
-  color: #be06ff;
-  font-family: "Iceland", cursive;
-}
-
-.Login a {
-  color: #ffffff;
-}
 .ItemChatBar .inputBx input {
   position: relative;
   width: 100%;
@@ -434,29 +373,7 @@
   align-items: center;
 }
 
-.itemsearch {
-  width: 100%;
-  height: 125px;
-  background-color: #171717;
-  position: absolute;
-  top: 0;
-  left: 20%;
-}
-.itemsearch .inputBx input {
-  position: relative;
-  width: 65%;
-  height: 60px;
-  margin-left: 180px;
-  margin-top: 29px;
-
-  font-size: 1.6em;
-  color: #be06ff;
-  outline: none;
-  background: #292929;
-  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
-  border-radius: 16px;
-}
-.itemsearch.inputBx input::placeholder {
-  color: #be06ff;
-  font-family: "Iceland", cursive;
+.PageWithMenu {
+  display: grid;
+  grid-template-columns: 300px 1fr;
 }
