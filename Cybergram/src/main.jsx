@@ -5,8 +5,11 @@ import Homepage from "./Pages/Homepage";
 import "./css/Estilos.css";
 import "./css/EstilosHome.css";
 import "./css/Profilepage.css";
+import "../../Cybergram/src/Pages/InChatPage/InChatPage.css";
+
+
 import "./Pages/Loginpage/Loginpage.css";
-import InChatPage from "./Pages/InChatPage";
+import InChatPage from "./Pages/InChatPage/InChatPage";
 import LoginPage from "./Pages/Loginpage/Loginpage";
 import Registerpage from "./Pages/Registerpage/Registerpage";
 

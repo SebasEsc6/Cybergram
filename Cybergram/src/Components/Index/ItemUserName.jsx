@@ -1,5 +1,7 @@
 import React from 'react'
 import img_user from '../../assets/Multimedia/imgs/img_user.png'
+import "../../Pages/InChatPage/InChatPage.css"
+
 function ItemUserName() {
   return (
     <div className='itemusername'>
