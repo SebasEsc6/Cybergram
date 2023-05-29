@@ -1,7 +1,7 @@
 import React from 'react'
 import ContainerPerfil from '../Components/Index/ContainerPerfil'
 import CardProfile from '../Components/Index/CardProfile'
-import Gohome from '../Components/Shared/Gohome'
+import Gohome from '../Components/Shared/Gohome/Gohome'
 
 const Pageprofile = () => {
   return (

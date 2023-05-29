@@ -1,0 +1,49 @@
+.Register {
+  background-image: url(../../assets/Multimedia/imgs/Exportar.jpg);
+  background-size: cover;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Register h2 {
+  font-size: 5em;
+  color: #be06ff;
+}
+
+.Register .inputBx input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+
+  font-size: 1.2em;
+  color: #be06ff;
+  outline: none;
+  background: #292929;
+  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+}
+.Register .inputBx input[type="submit"] {
+  font-family: "Iceland", cursive;
+  width: 100%;
+  background: #fe0000;
+  background: linear-gradient(45deg, #8826a5, #805189);
+  border: none;
+  cursor: pointer;
+
+  background: #292929;
+  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+}
+.Register .inputBx input::placeholder {
+  color: #be06ff;
+  font-family: "Iceland", cursive;
+}
+
+.Register a {
+  color: #ffffff;
+}

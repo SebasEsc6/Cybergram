@@ -1,22 +1,23 @@
 import React from "react";
-import Gohome from "../Components/Shared/Gohome";
+import Gohome from "../../Components/Shared/Gohome/Gohome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook,faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { useNavigate } from "react-router";
 
+import "./Registerpage.css";
+
 function Registerpage() {
-  
   const navigate = useNavigate();
 
   const casa = () => {
-    navigate('/loginpage');
+    navigate("/loginpage");
   };
   return (
-    <div className="Login">
-      <h2>CREATE YOUR ACOUNTT </h2>
+    <div className="Register">
+      <h2>CREATE YOUR ACCOUNT </h2>
 
-      <form className="Form">
+      <form>
         <div className="inputBx">
           <a>Usuario</a>
           <br />
@@ -50,24 +51,30 @@ function Registerpage() {
           <br />
           <br />
 
-          
           <div className="inputBx">
-            <input type="submit" value="Sign in"  onClick={casa}/>
-
-          </div>
-          
-          <br />
-
-          <div className="inputBx">
-          <FontAwesomeIcon icon={faFacebook} />
-            <input type="submit" value="Sign in with facebook" icon={<FontAwesomeIcon icon={faFacebook} />} />
+            <input type="submit" value="Sign in" onClick={casa} />
           </div>
 
           <br />
 
           <div className="inputBx">
-          <FontAwesomeIcon icon={faGoogle} />
-            <input type="submit" value="Sign in with Google" icon={<FontAwesomeIcon icon={faGoogle} />} />
+            <FontAwesomeIcon icon={faFacebook} />
+            <input
+              type="submit"
+              value="Sign in with facebook"
+              icon={<FontAwesomeIcon icon={faFacebook} />}
+            />
+          </div>
+
+          <br />
+
+          <div className="inputBx">
+            <FontAwesomeIcon icon={faGoogle} />
+            <input
+              type="submit"
+              value="Sign in with Google"
+              icon={<FontAwesomeIcon icon={faGoogle} />}
+            />
           </div>
         </div>
       </form>

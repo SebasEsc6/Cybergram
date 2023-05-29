@@ -1,5 +1,5 @@
 import React from 'react'
-import BttnHome from '../../assets/Multimedia/imgs/Icon-Home.png'
+import BttnHome from '../../../assets/Multimedia/imgs/Icon-Home.png'
 import { useNavigate } from 'react-router-dom';
 
 function Gohome() {

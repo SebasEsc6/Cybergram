@@ -1,9 +1,9 @@
 import React from 'react'
-import CardPages from '../Index/CardPages'
-import home from '../../assets/Multimedia/imgs/Icon-Home.png'
-import chat from '../../assets/Multimedia/imgs/Icon-chat.png'
-import search from '../../assets/Multimedia/imgs/Icon-search.png'
-import user from '../../assets/Multimedia/imgs/Icon-User.png'
+import CardPages from '../../Index/CardPages'
+import home from '../../../assets/Multimedia/imgs/Icon-Home.png'
+import chat from '../../../assets/Multimedia/imgs/Icon-chat.png'
+import search from '../../../assets/Multimedia/imgs/Icon-search.png'
+import user from '../../../assets/Multimedia/imgs/Icon-User.png'
 
 function Lefthover() {
 

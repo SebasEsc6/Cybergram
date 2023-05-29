@@ -1,5 +1,4 @@
 :root {
-  
   font-family: Iceland;
   line-height: 1.5;
   font-weight: 400;
@@ -15,6 +14,16 @@
   -webkit-text-size-adjust: 100%;
 }
 
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -25,10 +34,7 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
+  margin: 0 !important;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -68,5 +74,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
- 
 }
