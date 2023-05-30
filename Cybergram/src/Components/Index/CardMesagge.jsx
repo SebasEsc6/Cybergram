@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import img_user from "../../assets/Multimedia/imgs/img_user.png";
 import image_11 from "../../assets/Multimedia/imgs/image_11.png";
 import { io } from "socket.io-client";
+import "../../Pages/InChatPage/InChatPage.css";
 const socket = io("http://localhost:4500");
 
 function ItemMesagge() {
