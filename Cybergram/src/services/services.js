@@ -47,9 +47,9 @@ const listarPublicaciones = async () => {
   const res = await instance.get("/publicacion/listarPubli");
   return res.data;
 };
-const listarPublicacionesxUser = async (user) => {
-  const res = await instance.get("/publicacion/listarPublixUser", {
-    user,
+const listarPublicacionesxUser = async (uid) => {
+  const res = await instance.post("/publicacion/listarPublixUser", {
+    uid,
   });
   return res.data;
 };
