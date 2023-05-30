@@ -61,6 +61,13 @@ const loginUsuario = async (req, res = express.request) => {
   }
 };
 
+const userxId = async (req, res = express.request) => {
+  const { id } = req.body;
+  const user = await Usuario.findById({ _id: id });
+  res.json({
+    user,
+  });
+};
 const revalidarToken = (req, res = express.request) => {
   const { uid, name } = req;
   const token = await(generarJWT(uid, name));
@@ -75,4 +82,5 @@ module.exports = {
   loginUsuario,
   crearUsuario,
   revalidarToken,
+  userxId,
 };

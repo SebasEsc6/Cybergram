@@ -19,6 +19,6 @@ router.post(
 );
 
 router.get("/listarPubli", listarPublicaciones);
-router.get("/listarPublixUser", listarPublixUser);
+router.post("/listarPublixUser", listarPublixUser);
 
 module.exports = router;

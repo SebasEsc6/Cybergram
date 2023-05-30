@@ -7,10 +7,15 @@ const cors = require("cors");
 
 class servidor {
   constructor() {
-    this.PORT = process.env.PORT || 4500;
+    this.PORT = process.env.PORT || 4000;
     this.app = express();
     this.server = require("http").createServer(this.app);
-    this.io = require("socket.io")(this.server);
+    this.io = require("socket.io")(this.server, {
+      cors: {
+        origin: "*",
+        methods: ["GET", "POST"], // Cambia los métodos permitidos según tus necesidades
+      },
+    });
 
     this.paths = {
       user: "/api/user",

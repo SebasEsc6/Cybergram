@@ -36,8 +36,8 @@ const listarPublicaciones = async (req, res = express.request) => {
   }
 };
 const listarPublixUser = async (req, res = express.request) => {
-  const { user } = req.body;
-  const publicaciones = await Publicacion.find({ user: user });
+  const { uid } = req.body;
+  const publicaciones = await Publicacion.find({ user: uid });
   try {
     res.status(200).json({
       ok: true,

@@ -5,11 +5,15 @@ const {
   crearUsuario,
   loginUsuario,
   revalidarToken,
+  userxId,
 } = require("../Controllers/UserController");
+const { validarJWT } = require("../middlewares/validar-token");
 
 router.post("/LoginUser", loginUsuario);
 
 router.post("/newUser", ValidateUser, crearUsuario);
+
+router.post("/UserxId", userxId);
 
 router.get("/renew", revalidarToken);
 
