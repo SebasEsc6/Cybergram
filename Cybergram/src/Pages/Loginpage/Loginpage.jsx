@@ -8,8 +8,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login_Page = () => {
   const navigate = useNavigate();
-  const Register = () => {
+  const Home = () => {
     navigate("/home");
+  };
+  const Register = () => {
+    navigate("/register");
   };
 
   const [LoginData, setLoginData] = useState({
@@ -29,7 +32,7 @@ const Login_Page = () => {
         const { email, password } = LoginData;
         const result = await LoginUser(email, password);
         localStorage.setItem("token", JSON.stringify(result.token))
-        Register();
+        Home();
         console.log(result);
       } catch (error) {
         ToastMal()
@@ -69,6 +72,9 @@ const Login_Page = () => {
           <br />
           <div className="ButtonSignIn">
             <input type="submit" value="Sign in"  />
+          </div>
+          <div className="ButtonSignIn">
+            <input type="submit" value="Register"  />
           </div>
         </div>
       </form>
