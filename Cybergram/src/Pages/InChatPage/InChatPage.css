@@ -1,0 +1,67 @@
+.itemusername img {
+    position: relative;
+    width: 100px;
+    height: 100%;
+    margin-left: 380px;
+  }
+  
+  .itemusername {
+    width: 100%;
+  
+    background-color: #171717;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    position: fixed;
+    top: 0;
+    left: 280px;
+  }
+  .itemusername label {
+    width: 100%;
+    position: relative;
+    margin-left: 60px;
+    color: white;
+    font-family: "Iceland", cursive;
+    font-size: 5em;
+  }
+
+.ItemChatBar .inputBx input::placeholder {
+  color: #be06ff;
+  font-family: "Iceland", cursive;
+}
+
+
+.ItemChatBar .inputBx input {
+
+  position: relative;
+  width: 100%;
+  margin-bottom: 5%;
+
+
+  
+  width: 850px;
+  height: 40px;
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  font-size: 1.2em;
+  color: #be06ff;
+  outline: none;
+  background: #292929;
+  box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+}
+
+.ItemChatBar{
+position: fixed;
+bottom: 1px;
+left: 480px;
+    
+}
+
+
