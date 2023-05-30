@@ -1,30 +1,30 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Gohome from "../../Components/Shared/Gohome/Gohome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { useNavigate } from "react-router";
-import {registerUser} from "../../services/services"
+import { registerUser } from "../../services/services";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import "./Registerpage.css";
 
 function Registerpage() {
   const navigate = useNavigate();
 
   const casa = () => {
-    navigate("/loginpage");
+    navigate("/");
   };
 
-const [RegisterData, setRegisterData] = useState({
-  name : "",
-  email: "",
-  password: "",
+  const [RegisterData, setRegisterData] = useState({
+    name: "",
+    email: "",
+    password: "",
   });
   const handleChange = (e) => {
     setRegisterData({
       ...RegisterData,
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value,
     });
   };
 
@@ -35,24 +35,29 @@ const [RegisterData, setRegisterData] = useState({
       const followers = 0;
       const following = 0;
       const photoUser = "";
-      const result = await registerUser(name, email, password, followers, following, photoUser);
+      const result = await registerUser(
+        name,
+        email,
+        password,
+        followers,
+        following,
+        photoUser
+      );
       ToastBien();
       casa();
       console.log(result);
     } catch (error) {
-      ToastMal
-      console.error(error); 
+      ToastMal;
+      console.error(error);
     }
   };
 
   const ToastBien = () => {
     toast("Register completed!");
-  }
+  };
   const ToastMal = () => {
     toast("No se realizo correctamente el registro!!!");
-  }
-
-
+  };
 
   return (
     <div className="Register">
