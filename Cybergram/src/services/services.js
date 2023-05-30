@@ -30,6 +30,12 @@ const registerUser = async (
   });
   return res.data;
 };
+const userxId = async (id) => {
+  const res = await instance.post("/user/UserxId", {
+    id,
+  });
+  return res.data;
+};
 const CrearPubli = async (photo, likes) => {
   const res = await instance.get("/publicacion/newPublicacion", {
     photo,
@@ -41,7 +47,7 @@ const listarPublicaciones = async () => {
   const res = await instance.get("/publicacion/listarPubli");
   return res.data;
 };
-const listarPublicacionesxUser = async () => {
+const listarPublicacionesxUser = async (user) => {
   const res = await instance.get("/publicacion/listarPublixUser", {
     user,
   });
@@ -64,6 +70,7 @@ const listarCommentsxPubli = async (publi) => {
 export {
   LoginUser,
   registerUser,
+  userxId,
   CrearPubli,
   listarPublicaciones,
   listarPublicacionesxUser,
