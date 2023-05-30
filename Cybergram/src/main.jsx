@@ -10,8 +10,6 @@ import InChatPage from "./Pages/InChatPage";
 import LoginPage from "./Pages/Loginpage/Loginpage";
 import Registerpage from "./Pages/Registerpage/Registerpage";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import ProfilePage from "./Pages/Pageprofile";
@@ -26,13 +24,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/search" element={<SearchPage />} />
         <Route path="/config" element={<SettingsPage />} />
         <Route path="/home" element={<Homepage />} />
-        <Route path="/" element={<Registerpage />} />
+        <Route path="/register" element={<Registerpage />} />
 
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/Search" element={<SearchPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/Chat" element={<InChatPage />} />
-        <Route path="/loginpage" element={<LoginPage />} />
+        <Route path="/" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

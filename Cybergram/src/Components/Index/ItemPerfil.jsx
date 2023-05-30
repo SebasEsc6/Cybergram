@@ -1,7 +1,8 @@
 import React from 'react'
 import PhotoUser from '../../assets/Multimedia/imgs/PhotoUser.jpg'
 
-function ItemPerfil() {
+function ItemPerfil(props) {
+
   return (
     <div className="container-perfil">
       <div className="photo-user">
@@ -9,10 +10,10 @@ function ItemPerfil() {
       </div>
       <div className="info-user">
         <div className="name-user">
-          Totono.39
+          {props.User}
         </div>
         <div className="ubication-user">
-          Night City Club
+          {props.lugar}
         </div>
         <div className="date-user">
           27/02/2089
