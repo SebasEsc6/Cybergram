@@ -36,10 +36,13 @@ const userxId = async (id) => {
   });
   return res.data;
 };
-const CrearPubli = async (photo, likes) => {
-  const res = await instance.get("/publicacion/newPublicacion", {
+const CrearPubli = async (photo, likes, uid, nameUser, lugar) => {
+  const res = await instance.post("/publicacion/newPublicacion", {
     photo,
     likes,
+    uid,
+    nameUser,
+    lugar,
   });
   return res.data;
 };

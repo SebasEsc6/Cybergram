@@ -26,6 +26,7 @@ function ContainerCardPublicacion() {
           <CardPublicacion
             key={Post.id}
             id={Post.id}
+            photo={Post.photo}
             likes={Post.likes}
             user={Post.user}
             NameUser={Post.nameUser}

@@ -4,23 +4,24 @@ import { getToken } from "../../Helpers/localstorage";
 import { extractUser } from "../../Helpers/jwt";
 import { CrearPubli } from "../../services/services";
 import "./UploadPage.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Uploadpage() {
-  const [Lugar, setLugar] = useState("");
+  const [lugar, setLugar] = useState("");
+  const [Post, setPost] = useState("");
   const [loading, setloading] = useState("");
   const inputRef = useRef(null);
 
   const handleChange = (e) => {
-    setLugar({
-      ...Lugar,
-      [e.target.id]: e.target.value,
-    });
+    setLugar(e.target.value);
   };
 
   const uploadImage = async (e) => {
     const files = inputRef.current.files;
     const data = new FormData();
     data.append("file", files[0]);
-    data.append("upload_preset", "publicaciones");
+    data.append("upload_preset", "Publicacion");
     setloading(true);
     const res = await fetch(
       "https://api.cloudinary.com/v1_1/dlnt393h1/image/upload",
@@ -37,21 +38,25 @@ function Uploadpage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const resCloud = await uploadImage();
+    const photo = await uploadImage();
+    const likes = "0";
     try {
-      const { uid } = await extractUser(getToken());
-      const res = await CrearPubli(resCloud, Lugar, uid);
-      toast.info("Update exitoso, disfruta");
-      console.log("Registro exitoso:", res.data);
+      const { uid, name } = await extractUser(getToken());
+      const nameUser = name;
+      console.log(photo, lugar, uid, likes, nameUser);
+      const res = await CrearPubli(photo, likes, uid, nameUser, lugar);
+      toast.info("Se realizo la publicación!!");
+      console.log(res);
     } catch (error) {
-      console.error("Error al Update:", error.response.data);
-      toast.error("Error al Update: " + error.response.data.errors.msg);
+      console.error("No se pudo hacer la publicación:", error);
+      toast.error("No se pudo hacer la publicación: " + error);
     }
   };
 
   return (
     <div className="Upload">
       <CancelItem />
+      <ToastContainer />
       <h1>
         Upload a photo <br />
         or video
@@ -61,9 +66,9 @@ function Uploadpage() {
           <input type="file" id="archivo" ref={inputRef} placeholder="Place" />
           <input
             type="text"
-            id="date"
+            id="place"
             onChange={handleChange}
-            placeholder="Date"
+            placeholder="Place"
           />
           <input type="submit" placeholder="" />
         </div>

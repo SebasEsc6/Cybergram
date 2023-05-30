@@ -25,7 +25,7 @@ const ContainerPerfil = () => {
   return (
     <div className="DivContainerPubli">
       {Post?.map((Post) => {
-        return <PubliPerfil key={Post.id} />;
+        return <PubliPerfil key={Post.id} photo={Post.photo} />;
       })}
     </div>
   );

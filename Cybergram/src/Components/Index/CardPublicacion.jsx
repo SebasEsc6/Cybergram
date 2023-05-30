@@ -1,20 +1,20 @@
-import React, {useEffect, useState} from 'react'
-import ItemComentario from './ItemComentario'
-import ItemPerfil from './ItemPerfil'
-import img from '../../assets/Multimedia/imgs/imgPerfil.jpg'
-import iconcomment from '../../assets/Multimedia/imgs/Icon-comments.png'
-import iconlike from '../../assets/Multimedia/imgs/Icon-Like.png'
-import {listarCommentsxPubli} from "../../services/services"   
+import React, { useEffect, useState } from "react";
+import ItemComentario from "./ItemComentario";
+import ItemPerfil from "./ItemPerfil";
+import img from "../../assets/Multimedia/imgs/imgPerfil.jpg";
+import iconcomment from "../../assets/Multimedia/imgs/Icon-comments.png";
+import iconlike from "../../assets/Multimedia/imgs/Icon-Like.png";
+import { listarCommentsxPubli } from "../../services/services";
 
 function CardPublicacion(props) {
-  const [comentarios, setcomentarios] = useState([])
+  const [comentarios, setcomentarios] = useState([]);
 
   const fetchComentarios = async () => {
-    const publi = props.id ;
+    const publi = props.id;
     try {
       const comentarios = await listarCommentsxPubli(publi);
       setcomentarios(comentarios.Comments);
-      console.log(comentarios); 
+      console.log(comentarios);
     } catch (error) {
       console.error(error);
     }
@@ -24,12 +24,12 @@ function CardPublicacion(props) {
   }, []);
 
   return (
-    <div className='containerG'>
+    <div className="containerG">
       <div className="containerPubli">
         <div className="DivPhoto">
-          <img src={img} className='photo'></img>
+          <img src={props.photo} className="photo"></img>
         </div>
-        <div className='Perfil'>
+        <div className="Perfil">
           <div className="Componente-Perfil">
             <ItemPerfil User={props.NameUser} lugar={props.lugar} />
           </div>
@@ -46,11 +46,16 @@ function CardPublicacion(props) {
         <div className="comments">
           {comentarios?.map((comentario) => {
             return (
-              <ItemComentario key={comentario.id} user={comentario.nameUser} comment={comentario.contentComment} />
+              <ItemComentario
+                key={comentario.id}
+                user={comentario.nameUser}
+                comment={comentario.contentComment}
+              />
             );
           })}
         </div>
       </div>
     </div>
-  );}
-export default CardPublicacion
+  );
+}
+export default CardPublicacion;
