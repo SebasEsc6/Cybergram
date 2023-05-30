@@ -54,6 +54,7 @@
   background: linear-gradient(45deg, #8826a5, #805189);
   border: none;
   cursor: pointer;
+  margin-bottom: 30px;
 
   background: #292929;
   box-shadow: 24px 9px 6px rgba(0, 0, 0, 0.37);

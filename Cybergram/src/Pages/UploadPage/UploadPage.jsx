@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CancelItem from "../../Components/Shared/CancelItem/CancelItem";
 import { getToken } from "../../Helpers/localstorage";
 import { extractUser } from "../../Helpers/jwt";
 import { CrearPubli } from "../../services/services";
-
+import "./UploadPage.css";
 function Uploadpage() {
   const [Lugar, setLugar] = useState("");
   const [loading, setloading] = useState("");
