@@ -2,10 +2,16 @@ const express = require("express");
 const Publicacion = require("../Models/publicacionScheme");
 
 const crearPublicacion = async (req, res = express.request) => {
-  const publicacion = new Publicacion(req.body);
+  const { photo, likes, uid, nameUser, lugar } = req.body;
   try {
-    publicacion.user = req.uid;
-    publicacion.nameUser = req.name;
+    const user = uid;
+    const publicacion = new Publicacion({
+      photo: photo,
+      likes,
+      user,
+      nameUser,
+      lugar,
+    });
     const saved = await publicacion.save();
     res.status(200).json({
       ok: true,

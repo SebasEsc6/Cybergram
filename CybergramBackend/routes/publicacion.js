@@ -11,12 +11,7 @@ const { validarCampos } = require("../middlewares/validar-campos");
 
 //router.use(validarJWT);
 
-router.post(
-  "/newPublicacion",
-  validarJWT,
-  [check("photo", "La foto es obligatoria").not().isEmpty(), validarCampos],
-  crearPublicacion
-);
+router.post("/newPublicacion", crearPublicacion);
 
 router.get("/listarPubli", listarPublicaciones);
 router.post("/listarPublixUser", listarPublixUser);
