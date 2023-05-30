@@ -9,10 +9,12 @@ const comentarioSchema = Schema(
     publicacion: {
       type: Schema.Types.ObjectId,
       ref: "publicacion",
+      require: true,
     },
     nameUser: {
       type: Schema.Types.String,
       ref: "usuario",
+      require: true,
     },
   },
   {

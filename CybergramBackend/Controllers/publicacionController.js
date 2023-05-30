@@ -5,8 +5,8 @@ const crearPublicacion = async (req, res = express.request) => {
   const publicacion = new Publicacion(req.body);
   try {
     publicacion.user = req.uid;
+    publicacion.nameUser = req.name;
     const saved = await publicacion.save();
-
     res.status(200).json({
       ok: true,
       publicacion: saved,
@@ -21,12 +21,10 @@ const crearPublicacion = async (req, res = express.request) => {
 };
 
 const listarPublicaciones = async (req, res = express.request) => {
-  const { id } = req.uid;
   try {
-    let publicacion = await Publicacion.find({ id: id });
+    let publicacion = await Publicacion.find();
 
     res.status(200).json({
-      ok: true,
       publicacion,
     });
   } catch (error) {
@@ -37,8 +35,25 @@ const listarPublicaciones = async (req, res = express.request) => {
     });
   }
 };
+const listarPublixUser = async (req, res = express.request) => {
+  const { user } = req.body;
+  const publicaciones = await Publicacion.find({ user: user });
+  try {
+    res.status(200).json({
+      ok: true,
+      publicaciones,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(200).json({
+      ok: false,
+      msg: "Error Interno",
+    });
+  }
+};
 
 module.exports = {
   crearPublicacion,
   listarPublicaciones,
+  listarPublixUser,
 };

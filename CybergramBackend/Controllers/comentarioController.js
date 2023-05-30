@@ -18,6 +18,25 @@ const crearComentario = async (req, res = express.request) => {
     });
   }
 };
+
+const listarcommentsxPubli = async (req, res = express.request) => {
+  const { publi } = req.body;
+  const Comments = await Comment.find({ publicacion: publi });
+  try {
+    res.status(200).json({
+      ok: true,
+      Comments,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(200).json({
+      ok: false,
+      msg: "Error Interno",
+    });
+  }
+};
+
 module.exports = {
   crearComentario,
+  listarcommentsxPubli,
 };

@@ -7,7 +7,7 @@ const {
   revalidarToken,
 } = require("../Controllers/UserController");
 
-router.get("/LoginUser", loginUsuario);
+router.post("/LoginUser", loginUsuario);
 
 router.post("/newUser", ValidateUser, crearUsuario);
 
