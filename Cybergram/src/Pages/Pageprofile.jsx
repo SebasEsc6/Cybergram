@@ -7,13 +7,14 @@ import { getToken } from "../Helpers/localstorage";
 import { userxId } from "../services/services";
 
 const Pageprofile = () => {
-  const [User, setUser] = useState({});
+  const [res, setres] = useState({});
 
   const ObtenerUser = async (user) => {
     try {
       const res = await userxId(user.uid);
-      setUser(res);
-      console.log(res);
+      setres(res.user);
+      console.log(res.user);
+      console.log("Dios mio ayudame");
     } catch (error) {
       console.error(error);
     }
@@ -33,10 +34,10 @@ const Pageprofile = () => {
     <div className="profilePageDiv">
       <Gohome />
       <CardProfile
-        user={User.name}
-        followers={User.followers}
+        user={res.name}
+        followers={res.followers}
         post="5"
-        following={User.following}
+        following={res.following}
       />
       <ContainerPerfil />
     </div>
